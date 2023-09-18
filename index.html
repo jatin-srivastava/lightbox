@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Light Box</title>
+</head>
+<body>
+
+
+    <div class="galleryoverlay"></div>
+    <div class="imagebox">
+        <span>&times;</span>
+        <img src="" alt="">
+
+
+
+
+    </div>
+    <div class="container" id="gallery">
+        <div class="galleryItem">
+            <img src="box1_image.jpg" alt="">
+        </div>
+        <div class="galleryItem">
+            <img src="box2_image.jpg" alt="">
+        </div>
+        <div class="galleryItem">
+            <img src="box3_image.jpg" alt="">
+        </div>
+        <div class="galleryItem">
+            <img src="box4_image.jpg" alt="">
+        </div>
+        <div class="galleryItem">
+            <img src="box5_image.jpg" alt="">
+        </div>
+        <div class="galleryItem">
+            <img src="box7_image.jpg" alt="">
+        </div>
+        <div class="galleryItem">
+            <img src="box8_image.jpg" alt="">
+        </div>
+        <div class="galleryItem">
+            <img src="box2_image.jpg" alt="">
+        </div>
+        <div class="galleryItem">
+            <img src="box3_image.jpg" alt="">
+        </div>
+        <div class="galleryItem">
+            <img src="box4_image.jpg" alt="">
+        </div>
+        <div class="galleryItem">
+            <img src="box5_image.jpg" alt="">
+        </div>
+        <div class="galleryItem">
+            <img src="box7_image.jpg" alt="">
+        </div>
+        <div class="galleryItem">
+            <img src="box8_image.jpg" alt="">
+        </div>
+        <div class="galleryItem">
+            <img src="box2_image.jpg" alt="">
+        </div>
+        <div class="galleryItem">
+            <img src="box3_image.jpg" alt="">
+        </div>
+        <div class="galleryItem">
+            <img src="box4_image.jpg" alt="">
+        </div>
+        <div class="galleryItem">
+            <img src="box5_image.jpg" alt="">
+        </div>
+        <div class="galleryItem">
+            <img src="box7_image.jpg" alt="">
+        </div>
+        <div class="galleryItem">
+            <img src="box8_image.jpg" alt="">
+        </div>
+    </div>    
+</body>
+<script>
+
+    let overlay=document.querySelector(".galleryoverlay")
+    let imagebox=document.querySelector(".imagebox")
+    var img=document.querySelector(".imagebox img")
+    let close=document.querySelector('.imagebox span')
+
+
+    let gallery=document.querySelector("#gallery")
+    gallery.addEventListener("click",(event)=>{
+        let currentImagePath=event.target.src;
+
+        if (currentImagePath!==undefined){
+
+        
+
+        overlay.classList.add('galleryoverlayShow')
+        imagebox.classList.add('ingboxshow')
+        img.src=currentImagePath;
+
+        console.log(currentImagePath)
+        }
+})
+    
+
+    close.addEventListener("click",()=>{
+        overlay.classList.remove('galleryoverlayShow')
+        imagebox.classList.remove('ingboxshow')
+        
+    })
+
+</script>
+</html>
